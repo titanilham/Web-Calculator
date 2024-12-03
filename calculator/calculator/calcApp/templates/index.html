@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %} 
+
+<html>
+    <head>
+        <title>Сalculator</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    </head>
+
+    <body>
+       <div class='title_container'>
+           <h1 class='calculator_text'>Calculator</h1>
+       </div>
+       <form method="POST" action="{% url 'index' %}">
+        {% csrf_token %}
+        
+       <input class="entry_field" type="text" placeholder="0" id="entry_field" name='entry_field' value="" autocomplete="off" autofocus>
+        
+         <div class='answer_container'>
+         <p class='answer'>Answer: {{ answer }}</p>
+         </div>
+      
+
+       <div class='buttons_numbers'>
+        <button class="btn" type="button" onclick="addValueAndSubmit('1')">1</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('2')">2</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('3')">3</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('4')">4</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('5')">5</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('6')">6</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('7')">7</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('8')">8</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('9')">9</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('0')">0</button>
+    </div >
+        <div class='buttons_operations'>
+        <button class="btn" type="button" onclick="addValueAndSubmit('+')">+</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('-')">-</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('/')">/</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('*')">*</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('.')">.</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('**')">^</button>
+        <button class="btn" type="button" onclick="addValueAndBack('sqrt()')">√</button> {% comment %} And cursor on 1 char back {% endcomment %}
+       
+        <button class="btn" type="button" onclick="addValueAndSubmit('(')">(</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit(')')">)</button>
+
+        <button class="btn" type="button" onclick="deleteLastChar()">CE</button>  
+        <button class="btn" type="button" onclick="clearInput()">DEL</button>
+        
+        <button class="btn" type="submit" onclick="submitForm()" id="equals">=</button>
+
+    </div>
+       
+       </form>
+       <script src="{% static "js/script.js" %}"></script>
+       
+    </body>
+
+</html>

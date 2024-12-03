@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Kanit */
+
+/* Зеленый - #61892F */
+/* Яркий зеленый - #86C232 */
+/* Темно-серый - #222629 */
+/* Серый - #474B4F */
+/* Светло-серый - #6B6E70 */
+
+
+body{
+
+    background-color: #222629 !important;
+    color: white;
+    font-family: 'Kanit';
+
+}
+
+
+.calculator_text{
+
+    text-align: center;
+    font-size: 300%;
+    color: #86C232;
+  
+}
+
+.entry_field{
+    
+    width: 99%;
+    padding: 0;
+    border: 0;
+    text-align: right;
+    text-indent: -100px !important;
+    padding-right: 20px;
+    
+
+    height: 50px;
+    font-size: 40px;
+    font-family: 'Kanit';
+    color: white;
+    outline: none;
+    background-color: #474B4F;
+    
+
+}
+
+
+.entry_field:focus{
+
+    border: 2px solid #86C232;
+
+}
+
+.buttons-numbers{
+
+    display:flex;
+    justify-content: space-between;
+    gap: 3px;
+
+}
+.buttons_operations{
+
+    display:flex;
+    justify-content:flex-end;
+    gap: 3px;
+    
+
+
+}
+
+#equals{
+
+    background-color: #86C232;
+    
+}
+#equals:hover{
+
+    background-color: #6b9c26;
+   
+
+}
+
+.btn{
+
+    border: none;
+    width: 80px;
+    height: 80px;
+    font-family: 'Kanit';
+    color: white !important;
+    background-color: #474B4F;
+    font-size: 200%;
+}
+.btn:hover{
+
+    background-color: #363a3d;
+
+}
+
+.answer_container{
+    width: 99%;
+    
+    height: 55px;
+    font-size: 40px;
+    text-indent: -100px !important;
+    padding-right: 20px;
+    
+
+}
+.answer{
+    text-align: end;
+    padding: 0;
+}
+
+.error{
+
+    color: #c23232;
+    text-align: right !important;;
+
+}
