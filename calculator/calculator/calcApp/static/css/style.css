@@ -60,6 +60,7 @@ body{
     grid-gap: 10px; /* Пробел между кнопками */
     justify-content: center; /* Центрируем кнопки */
     margin: 20px auto; /* Отступы сверху и снизу */
+
 }
 
 .buttons_numbers {
@@ -80,6 +81,7 @@ body{
     background-color: #474B4F;
     cursor: pointer;
     text-align: center;
+
 }
 
 .btn:hover {
@@ -113,4 +115,25 @@ body{
     text-align: end;
     padding: 0;
 }
+
+@media only screen and (max-width: 900px) {
+    .buttons_numbers, .buttons_operations {
+        grid-template-columns: repeat(3, 1fr); /* 3 кнопки в строке */
+        grid-gap: 8px; /* Немного уменьшаем пробелы между кнопками */
+    }
+
+    .btn {
+        width: 100%; /* Кнопки растягиваются в строке */
+        height: 50px;
+        font-size: 1.2rem; /* Уменьшаем текст */
+    }
+    #equals {
+        height: 50px;
+    }
+    .answer {
+        font-size: 30px;
+    }
+}
+
+
 
