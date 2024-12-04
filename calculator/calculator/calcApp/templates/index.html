@@ -22,7 +22,7 @@
          </div>
       
 
-       <div class='buttons_numbers'>
+       <div class='buttons_numbers' class='buttons'>
         <button class="btn" type="button" onclick="addValueAndSubmit('1')">1</button>
         <button class="btn" type="button" onclick="addValueAndSubmit('2')">2</button>
         <button class="btn" type="button" onclick="addValueAndSubmit('3')">3</button>
@@ -33,8 +33,10 @@
         <button class="btn" type="button" onclick="addValueAndSubmit('8')">8</button>
         <button class="btn" type="button" onclick="addValueAndSubmit('9')">9</button>
         <button class="btn" type="button" onclick="addValueAndSubmit('0')">0</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('(')">(</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit(')')">)</button>
     </div >
-        <div class='buttons_operations'>
+        <div class='buttons_operations' class='buttons'>
         <button class="btn" type="button" onclick="addValueAndSubmit('+')">+</button>
         <button class="btn" type="button" onclick="addValueAndSubmit('-')">-</button>
         <button class="btn" type="button" onclick="addValueAndSubmit('/')">/</button>
@@ -42,9 +44,8 @@
         <button class="btn" type="button" onclick="addValueAndSubmit('.')">.</button>
         <button class="btn" type="button" onclick="addValueAndSubmit('**')">^</button>
         <button class="btn" type="button" onclick="addValueAndBack('sqrt()')">√</button> {% comment %} And cursor on 1 char back {% endcomment %}
-       
-        <button class="btn" type="button" onclick="addValueAndSubmit('(')">(</button>
-        <button class="btn" type="button" onclick="addValueAndSubmit(')')">)</button>
+        <button class="btn" type="button" onclick="addValueAndSubmit('pi')">π</button>
+        <button class="btn" type="button" onclick="addValueAndBack('abs()')">ABS</button>
 
         <button class="btn" type="button" onclick="deleteLastChar()">CE</button>  
         <button class="btn" type="button" onclick="clearInput()">DEL</button>

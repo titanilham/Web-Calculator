@@ -52,51 +52,53 @@ body{
 
 }
 
-.buttons-numbers{
 
-    display:flex;
-    justify-content: space-between;
-    gap: 3px;
+/* BUTTONS */
 
-}
-.buttons_operations{
-
-    display:flex;
-    justify-content:flex-end;
-    gap: 3px;
-    
-
-
+.buttons_numbers, .buttons_operations {
+    display: grid;
+    grid-gap: 10px; /* Пробел между кнопками */
+    justify-content: center; /* Центрируем кнопки */
+    margin: 20px auto; /* Отступы сверху и снизу */
 }
 
-#equals{
-
-    background-color: #86C232;
-    
-}
-#equals:hover{
-
-    background-color: #6b9c26;
-   
-
+.buttons_numbers {
+    grid-template-columns: repeat(4, 80px); /* 4 кнопки в строке */
 }
 
-.btn{
+.buttons_operations {
+    grid-template-columns: repeat(4, 80px); /* 4 кнопки в строке */
+}
 
+.btn {
+    width: 80px; /* Ширина кнопок */
+    height: 80px; /* Высота кнопок */
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
     border: none;
-    width: 80px;
-    height: 80px;
-    font-family: 'Kanit';
-    color: white !important;
+    color: white;
     background-color: #474B4F;
-    font-size: 200%;
-}
-.btn:hover{
-
-    background-color: #363a3d;
-
+    cursor: pointer;
+    text-align: center;
 }
 
+.btn:hover {
+    background-color: #363a3d; /* Цвет при наведении */
+}
+
+#equals {
+    background-color: #86C232;
+     
+    height: 80px;
+}
+
+#equals:hover {
+    background-color: #6b9c26;
+}
+
+
+
+/* ANSWER */
 .answer_container{
     width: 99%;
     
@@ -112,9 +114,3 @@ body{
     padding: 0;
 }
 
-.error{
-
-    color: #c23232;
-    text-align: right !important;;
-
-}

@@ -4,12 +4,11 @@ from math import sqrt, pi, sin, cos, tan
 
 def calc(x):
     try:
-        # Пытаемся вычислить выражение
         return eval(x)
     except ZeroDivisionError:
-        return 'Infinity'  # Деление на ноль
+        return 'Error'  # Деление на ноль
     except SyntaxError:
-        return 'Invalid expression'  # Некорректное выражение
+        return 'Error'  # Некорректное выражение
     except Exception as e:
         print(e)
         return 'Error'  # Обработка других ошибок
@@ -27,7 +26,10 @@ def index(request):
         if not button_value:
             answer = 'Input is required'
         else:
-            answer = calc(button_value)
+            try:
+                answer = round(calc(button_value), 2)
+            except TypeError:
+                answer = 'Error'
 
         return render(request, 'index.html', {'answer': answer})
 
